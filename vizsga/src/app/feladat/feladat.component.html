@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular projekt</title>
+</head>
+<body>
+    <div class="form-group">
+        <label for="name">Név:</label>
+        <input type="text" id="name" class="form-control"  [(ngModel)]="nev">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" class="form-control" [(ngModel)]="email">
+      </div>
+      
+      <button class="btn btn-primary" (click)="EredmenyMentes()">Mentés</button>
+
+      <p>A fogeredmény: {{ fogEredmeny }}</p>
+      <h2>Log lista:</h2>
+<ul>
+  <li *ngFor="let log of logList">{{ log }}</li>
+</ul>
+
+</body>
+</html>
